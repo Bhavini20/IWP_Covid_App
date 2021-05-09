@@ -17,27 +17,78 @@ include('includes/config.php');
     <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
     <link href="vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
     <link href="css/modern-business.css" rel="stylesheet">
-    
-    <style>
-    .navbar-toggler {
-        z-index: 1;
-    }
-    
-    @media (max-width: 576px) {
-        nav > .container {
-            width: 100%;
-        }
-    }
-    .carousel-item.active,
-    .carousel-item-next,
-    .carousel-item-prev {
-        display: block;
-    }
 
-    .bingwidget
-    {
-        padding-left: 250px;
-    }
+    <style>
+        .navbar-toggler {
+            z-index: 1;
+        }
+
+        @media (max-width: 576px) {
+            nav>.container {
+                width: 100%;
+            }
+        }
+
+        .carousel-item.active,
+        .carousel-item-next,
+        .carousel-item-prev {
+            display: block;
+        }
+
+        .td {
+            font-size: 4rem;
+            font-weight: 400;
+            overflow: hidden;
+            white-space: nowrap;
+            animation: typing 5s steps(24), blink 1s ease-in-out 7s infinite;
+            width: 10ch;
+            margin: auto;
+            border-right: 4px solid rgb(43, 62, 70);
+            color: black;
+        }
+
+        @keyframes typing {
+            75% {
+                width: 0ch;
+                color: #fcf876;
+            }
+
+            100% {
+                width: 10ch;
+            }
+        }
+
+        @keyframes blink {
+            0% {
+                border-right: 4px solid rgba(255, 255, 255, 0);
+            }
+
+            100% {
+                border-right: 4px solid rgb(43, 62, 70);
+            }
+        }
+
+        .mb-5 {
+            margin-top: -1rem;
+        }
+
+        .tb{
+            font-size: 3.4rem;
+            font-weight: 300;
+        }
+
+        .bingwidget {
+            padding-left: 250px;
+        }
+
+        .bldgrp{
+            margin-top: 5rem;
+        }
+       
+        .don{
+            margin-top: 7rem;
+        }
+        
     </style>
 
 </head>
@@ -45,51 +96,51 @@ include('includes/config.php');
 <body>
 
     <!-- Navigation -->
-<?php include('includes/header.php');?>
-<?php include('includes/slider.php');?>
-   
+    <?php include('includes/header.php'); ?>
+    <?php include('includes/slider.php'); ?>
+
     <!-- Page Content -->
     <div class="container">
 
-        <h1 class="my-4 mt-5 mb-5 text-center text-primary">Welcome to Covid Relief Management System</h1>
-        <h1 class="my-4 mt-5 mb-5 text-center">Covid Statistics</h1>
+        <h1 class="my-4 mt-5 mb-5 text-center text-primary td">WELCOME</h1>
+        <h2 class="my-4 mt-5 mb-5 text-center text-primary tb">COVID RELEIF WEBSITE</h2>
+        <h1 class="my-4 mt-5 mb-5 text-center ">Covid Statistics</h1>
         <div class="bingwidget" data-type="covid19" data-market="en-us" data-language="en-us" data-app="bingwidget"></div>
 
         <script src="//www.bing.com/widget/bootstrap.answer.js" async=""></script>
         <!-- Marketing Icons Section -->
-       
+
         <!-- Portfolio Section -->
         <h2 class="mb-5">Some of the Donors</h2>
 
         <div class="row">
-                   <?php 
-$status=1;
-$sql = "SELECT * from tblblooddonars where status=:status order by rand() limit 6";
-$query = $dbh -> prepare($sql);
-$query->bindParam(':status',$status,PDO::PARAM_STR);
-$query->execute();
-$results=$query->fetchAll(PDO::FETCH_OBJ);
-$cnt=1;
-if($query->rowCount() > 0)
-{
-foreach($results as $result)
-{ ?>
+            <?php
+            $status = 1;
+            $sql = "SELECT * from tblblooddonars where status=:status order by rand() limit 6";
+            $query = $dbh->prepare($sql);
+            $query->bindParam(':status', $status, PDO::PARAM_STR);
+            $query->execute();
+            $results = $query->fetchAll(PDO::FETCH_OBJ);
+            $cnt = 1;
+            if ($query->rowCount() > 0) {
+                foreach ($results as $result) { ?>
 
-            <div class="col-lg-4 col-sm-6 portfolio-item">
-                <div class="card h-100">
-                    <a href="#"><img class="card-img-top img-fluid" src="https://www.wockhardthospitals.com/wp-content/uploads/2020/06/Plasma-donation-at-Wockhardt-Hospitals.jpg" alt="" ></a>
-                    <div class="card-block">
-                        <h4 class="card-title"><a href="#"><?php echo htmlentities($result->FullName);?></a></h4>
-<p class="card-text"><b>  Gender :</b> <?php echo htmlentities($result->Gender);?></p>
-<p class="card-text"><b>Blood Group :</b> <?php echo htmlentities($result->BloodGroup);?></p>
+                    <div class="col-lg-4 col-sm-6 portfolio-item">
+                        <div class="card h-100">
+                            <a href="#"><img class="card-img-top img-fluid" src="https://www.wockhardthospitals.com/wp-content/uploads/2020/06/Plasma-donation-at-Wockhardt-Hospitals.jpg" alt=""></a>
+                            <div class="card-block">
+                                <h4 class="card-title"><a href="#"><?php echo htmlentities($result->FullName); ?></a></h4>
+                                <p class="card-text"><b> Gender :</b> <?php echo htmlentities($result->Gender); ?></p>
+                                <p class="card-text"><b>Blood Group :</b> <?php echo htmlentities($result->BloodGroup); ?></p>
 
+                            </div>
+                        </div>
                     </div>
-                </div>
-            </div>
 
-            <?php }} ?>
-          
- 
+            <?php }
+            } ?>
+
+
 
 
 
@@ -97,17 +148,17 @@ foreach($results as $result)
         <!-- /.row -->
 
         <!-- Features Section -->
-        <div class="row">
+        <div class="row bldgrp">
             <div class="col-lg-6">
                 <h2>BLOOD GROUPS</h2>
-          <p>  blood group of any human being will mainly fall in any one of the following groups.</p>
+                <p> Blood group of any human being will mainly fall in any one of the following groups.</p>
                 <ul>
-                
-                
-<li>A positive or A negative</li>
-<li>B positive or B negative</li>
-<li>O positive or O negative</li>
-<li>AB positive or AB negative.</li>
+
+
+                    <li>A positive or A negative</li>
+                    <li>B positive or B negative</li>
+                    <li>O positive or O negative</li>
+                    <li>AB positive or AB negative.</li>
                 </ul>
                 <p>A healthy diet helps ensure a successful blood donation, and also makes you feel better! Check out the following recommended foods to eat prior to your donation.</p>
             </div>
@@ -120,13 +171,13 @@ foreach($results as $result)
         <hr>
 
         <!-- Call to Action Section -->
-        <div class="row mb-4">
+        <div class="row mb-4 don">
             <div class="col-md-8">
-            <h4>UNIVERSAL DONORS AND RECIPIENTS</h4>
+                <h4>UNIVERSAL DONORS AND RECIPIENTS</h4>
                 <p>
-The most common blood type is O, followed by type A.
+                    The most common blood type is O, followed by type A.
 
-Type O individuals are often called "universal donors" since their blood can be transfused into persons with any blood type. Those with type AB blood are called "universal recipients" because they can receive blood of any type.</p>
+                    Type O individuals are often called "universal donors" since their blood can be transfused into persons with any blood type. Those with type AB blood are called "universal recipients" because they can receive blood of any type.</p>
             </div>
             <div class="col-md-4">
                 <a class="btn btn-lg btn-secondary btn-block" href="become-donar.php">Become a Donar</a>
@@ -137,7 +188,7 @@ Type O individuals are often called "universal donors" since their blood can be 
     <!-- /.container -->
 
     <!-- Footer -->
-  <footer class="py-5 bg-inverse">
+    <footer class="py-5 bg-inverse">
         <div class="container">
             <p class="m-0 text-center text-white">Copyright &copy; Covid Relief Management System 2021</p>
         </div>
