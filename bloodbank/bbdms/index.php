@@ -114,7 +114,7 @@ include('includes/config.php');
     <!-- Page Content -->
     <div class="container">
 
-        <h1 class="my-4 mt-5 mb-5 text-center text-primary td">WELCOME</h1>
+        <h1 class="my-4 mt-3 mb-5 text-center  td">WELCOME</h1>
         <h2 class="my-4 mt-5 mb-5 text-center text-primary tb ">COVID RELEIF WEBSITE</h2>
         <h1 class="my-4 mt-5 mb-5 text-center gh">Covid Statistics</h1>
         <div class="bingwidget" data-type="covid19" data-market="en-us" data-language="en-us" data-app="bingwidget"></div>
