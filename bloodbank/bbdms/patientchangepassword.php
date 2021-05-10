@@ -21,12 +21,12 @@ include('includes/config1.php');
   if($count==1) :
     $fetch=$db->query("UPDATE `users` SET `password` = '$pwd' WHERE `id`='$user_id'");
     $old_password=''; $password =''; $confirm_pwd = '';
-    $msg_sucess = "Your new password update successfully.";
+    $msg_sucess = "Your new password updated successfully.";
   else:
     $error = "The password you gave is incorrect...";
   endif;
   else :
-    $error = "Old password new password same Please try again...";
+    $error = "Old password and new password are same Please try again...";
   endif;
   else:
     $error = "New password and confirm password do not matched";
