@@ -100,7 +100,7 @@ include('includes/config.php');
         }
 
         .gh{
-            padding-top: 7rem;
+            padding-top: 3rem;
         }
 
         .cov{
@@ -165,7 +165,7 @@ include('includes/config.php');
 
         <!-- Features Section -->
         <div class="row bldgrp">
-            <div class="col-lg-6">
+            <div class="col-lg-8">
                 <h2>BLOOD GROUPS</h2>
                 <p> Blood group of any human being will mainly fall in any one of the following groups.</p>
                 <ul>
@@ -175,8 +175,15 @@ include('includes/config.php');
                     <li>AB positive or AB negative.</li>
                 </ul>
                 <p>A healthy diet helps ensure a successful blood donation, and also makes you feel better! Check out the following recommended foods to eat prior to your donation.</p>
+                <p>In living donation, the following blood types are compatible:
+                <ul>
+                <li> Donors with blood type A... can donate to recipients with blood types A and AB </li>
+                <li>Donors with blood type B... can donate to recipients with blood types B and AB</li>
+                <li>Donors with blood type AB... can donate to recipients with blood type AB only</li>
+                <li>Donors with blood type O... can donate to recipients with blood types A, B, AB and O </li>
+                (O is the universal donor: donors with O blood are compatible with any other blood type)</ul></p>
             </div>
-            <div class="col-lg-6">
+            <div class="col-lg-4">
                 <img class="img-fluid rounded" src="https://www.news-medical.net/image.axd?picture=2020%2F10%2Fshutterstock_603317201-1.jpg" alt="">
             </div>
         </div>
