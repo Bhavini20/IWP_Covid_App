@@ -1,37 +1,186 @@
-<?php 
-if(isset($_POST['submit'])){
-    $to = "tanmayeechoudhury2000@gmail.com"; // this is your Email address
-    $from = $_POST['email']; // this is the sender's Email address
-    $first_name = $_POST['first_name'];
-    $last_name = $_POST['last_name'];
-    $subject = "Form submission";
-    $subject2 = "Copy of your form submission";
-    $message = $first_name . " " . $last_name . " wrote the following:" . "\n\n" . $_POST['message'];
-    $message2 = "Here is a copy of your message " . $first_name . "\n\n" . $_POST['message'];
-
-    $headers = "From:" . $from;
-    $headers2 = "From:" . $to;
-    mail($to,$subject,$message,$headers);
-    mail($from,$subject2,$message2,$headers2); // sends a copy of the message to the sender
-    echo "Mail Sent. Thank you " . $first_name . ", we will contact you shortly.";
-    // You can also use header('Location: thank_you.php'); to redirect to another page.
-    }
-?>
+<?php include('includes/patientheader.php'); ?>
 
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-<title>Form submission</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
+	
+    <title>Patient Login</title>
+    <style>
+        .cont1{
+            text-align: center;
+            margin-left: 50px;
+        }
+        .cont2{
+            margin-left: 70px;
+        }
+        
+        ol {
+  counter-reset: li; 
+  list-style: none; 
+  padding: 0;
+            margin-left: 300px;
+            margin-right: 200px;
+  text-shadow: 0 1px 0 rgba(255,255,255,.5);
+}
+
+ol a {
+  position: relative;
+  display: block;
+  padding: .4em .4em .4em 2em;
+  margin: .5em 0;
+  background: #def29e;
+  color: #444;
+    font-size: 20px;
+  text-decoration: none;
+  border-radius: .3em;
+  transition: .3s ease-out;
+}
+
+ol a:hover { background: #efe7af; }
+ol a:hover:before { transform: rotate(360deg); }
+ol a:before {
+  content: counter(li);
+  counter-increment: li;
+  position: absolute;
+  left: -1.3em;
+  top: 50%;
+  margin-top: -1.3em;
+  background: #f8b9a6;
+  height: 2em;
+  width: 2em;
+  line-height: 2em;
+  border: .3em solid #fff;
+  text-align: center;
+  font-weight: bold;
+  border-radius: 2em;
+  transition: all .3s ease-out;
+}
+        .sidebar-container {
+  position: fixed;
+  width: 250px;
+  height: 100%;
+  left: 0;
+  overflow-x: hidden;
+  overflow-y: auto;
+  background: #1a1a1a;
+  color: #fff;
+            margin-top: 71px;
+}
+
+.content-container {
+  padding-top: 20px;
+}
+
+
+.sidebar-navigation {
+  padding: 0;
+  margin: 0;
+  list-style-type: none;
+  position: relative;
+}
+
+.sidebar-navigation li {
+  background-color: transparent;
+  position: relative;
+  display: inline-block;
+  width: 100%;
+  line-height: 40px;
+}
+
+.sidebar-navigation li a {
+  padding: 10px 15px 10px 30px;
+  display: block;
+  color: #fff;
+    font-size: 17px;
+}
+
+.sidebar-navigation li .fa {
+  margin-right: 10px;
+}
+
+.sidebar-navigation li a:active,
+.sidebar-navigation li a:hover,
+.sidebar-navigation li a:focus {
+  text-decoration: none;
+  outline: none;
+}
+
+.sidebar-navigation li::before {
+  background-color: #2574A9;
+  position: absolute;
+  content: '';
+  height: 100%;
+  left: 0;
+  top: 0;
+  -webkit-transition: width 0.2s ease-in;
+  transition: width 0.2s ease-in;
+  width: 3px;
+  z-index: -1;
+}
+
+.sidebar-navigation li:hover::before {
+  width: 100%;
+}
+
+.sidebar-navigation .header {
+  font-size: 20px;
+  text-transform: uppercase;
+  background-color: #151515;
+  padding: 10px 10px 10px 10px;
+    color: #aca8a8;
+    text-align: center;
+}
+
+.sidebar-navigation .header::before {
+  background-color: transparent;
+}
+
+    </style>
 </head>
 <body>
 
-<form action="" method="post">
-First Name: <input type="text" name="first_name"><br>
-Last Name: <input type="text" name="last_name"><br>
-Email: <input type="text" name="email"><br>
-Message:<br><textarea rows="5" name="message" cols="30"></textarea><br>
-<input type="submit" name="submit" value="Submit">
-</form>
+			<div class="sidebar-container">
+  <ul class="sidebar-navigation">
+    <li class="header">Navigation</li>
+    <li>
+      <a href="patientwelcome.php">
+        <i class="fa fa-home" aria-hidden="true"></i> Homepage
+      </a>
+    </li>
+    <li>
+      <a href="patientrequest.php">
+        <i class="fa fa-tachometer" aria-hidden="true"></i> Make a Request
+      </a>
+    </li> 
+   
+    
+  </ul>
+</div>
 
-</body>
-</html> 
+    <br><br><br><br>
+    <div class="cont1">
+        <div class="cont2">
+    
+    <h2>Doctors' Details:</h2><hr>
+        </div>
+    <ol>
+    <li><a href="mailto:ankit@gmail.com" target="_blank">Dr. Ankit Aggarwal</a></li>
+    <li><a href="mailto:sunaina@gmail.com" target="_blank">Dr. Sunaina Sharma</a></li>
+    <li><a href="mailto:raghav@gmail.com" target="_blank">Dr. Raghavendra Biswal</a></li>
+    <li><a href="mailto:amruta@gmail.com" target="_blank">Dr. Amruta Singh</a></li>
+    <li><a href="mailto:neil@gmail.com" target="_blank">Dr. Neil Mehta</a></li>
+    <li><a href="mailto:ankush@gmail.com" target="_blank">Dr. Ankush Tripathi</a></li>
+    <li><a href="mailto:dhvani@gmail.com" target="_blank">Dr. Dhvani Lokhande</a></li>
+    <li><a href="mailto:sushmi@gmail.com" target="_blank">Dr. Sushmita Reddy</a></li>
+    <li><a href="mailto:shweta@gmail.com" target="_blank">Dr. Shweta Shetty</a></li>
+    <li><a href="mailto:ashish@gmail.com" target="_blank">Dr. Ashish Bansal</a></li>
+        </ol>
+    </div>
+    
+   
+        </body>
+</html>
