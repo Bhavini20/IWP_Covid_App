@@ -116,48 +116,35 @@ include('includes/config.php');
 
         <h1 class="my-4 mt-3 mb-5 text-center  td">WELCOME</h1>
         <h2 class="my-4 mt-5 mb-5 text-center text-primary tb ">COVID RELEIF WEBSITE</h2>
-        <h1 class="my-4 mt-5 mb-5 text-center gh">Covid Statistics</h1>
-        <div class="bingwidget" data-type="covid19" data-market="en-us" data-language="en-us" data-app="bingwidget"></div>
+        
+        
+        <!--What is covid-19-->
 
+         <div class="row cov">
+            <div class="col-lg-6">
+                <h2>WHAT IS COVID-19</h2>
+                <p style="padding-top: 1rem;"> Coronavirus disease (COVID-19) is an infectious disease caused by a newly discovered coronavirus.Most people 
+                infected with the COVID-19 virus will experience mild to moderate respiratory illness and recover without requiring
+                special treatment.  Older people, and those with underlying medical problems like cardiovascular disease, diabetes,
+                chronic respiratory disease, and cancer are more likely to develop serious illness.</p>
+               <p>The best way to prevent and slow down transmission is to be well informed about the COVID-19 virus, the disease it causes and 
+               how it spreads. Protect yourself and others from infection by washing your hands or using an alcohol based rub frequently and not touching your face. 
+                The COVID-19 virus spreads primarily through droplets of saliva or discharge from the nose when an infected person coughs or sneezes, 
+                so it’s important that you also practice respiratory etiquette</p>
+            </div>
+            <div class="col-lg-6">
+                <img class="img-fluid rounded" src="https://static.toiimg.com/thumb/81833147.cms?width=804&height=603&resizemode=4&imgsize=142309" alt="">
+            </div>
+        </div>
+
+
+        <div class="fixed-bg">
+        <h1 class="my-4 mt-5 mb-5 text-center gh">LIVE COVID STATISTICS</h1>
+        <div class="bingwidget" data-type="covid19" data-market="en-us" data-language="en-us" data-app="bingwidget"></div>
+       </div>
         <script src="//www.bing.com/widget/bootstrap.answer.js" async=""></script>
         <!-- Marketing Icons Section -->
 
-        <!-- Portfolio Section -->
-        <h2 class="mb-5">Some of the Donors</h2>
-
-        <div class="row">
-            <?php
-            $status = 1;
-            $sql = "SELECT * from tblblooddonars where status=:status order by rand() limit 6";
-            $query = $dbh->prepare($sql);
-            $query->bindParam(':status', $status, PDO::PARAM_STR);
-            $query->execute();
-            $results = $query->fetchAll(PDO::FETCH_OBJ);
-            $cnt = 1;
-            if ($query->rowCount() > 0) {
-                foreach ($results as $result) { ?>
-
-                    <div class="col-lg-4 col-sm-6 portfolio-item">
-                        <div class="card h-100">
-                            <a href="#"><img class="card-img-top img-fluid" src="https://www.wockhardthospitals.com/wp-content/uploads/2020/06/Plasma-donation-at-Wockhardt-Hospitals.jpg" alt=""></a>
-                            <div class="card-block">
-                                <h4 class="card-title"><a href="#"><?php echo htmlentities($result->FullName); ?></a></h4>
-                                <p class="card-text"><b> Gender :</b> <?php echo htmlentities($result->Gender); ?></p>
-                                <p class="card-text"><b>Blood Group :</b> <?php echo htmlentities($result->BloodGroup); ?></p>
-
-                            </div>
-                        </div>
-                    </div>
-
-            <?php }
-            } ?>
-
-
-
-
-
-        </div>
-        <!-- /.row -->
 
         <!-- Features Section -->
         <div class="row bldgrp">
@@ -173,7 +160,7 @@ include('includes/config.php');
                 <p>A healthy diet helps ensure a successful blood donation, and also makes you feel better! Check out the following recommended foods to eat prior to your donation.</p>
             </div>
             <div class="col-lg-6">
-                <img class="img-fluid rounded" src="https://static.toiimg.com/thumb/81833147.cms?width=804&height=603&resizemode=4&imgsize=142309" alt="">
+                <img class="img-fluid rounded" src="" alt="">
             </div>
         </div>
         <!-- /.row -->
