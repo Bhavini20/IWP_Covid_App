@@ -86,6 +86,8 @@ include('includes/config.php');
 
         .bingwidget {
             padding-left: 250px;
+            padding-right: 250px;
+            padding-bottom: 25px;
     
         }
 
@@ -99,6 +101,11 @@ include('includes/config.php');
 
         .gh{
             padding-top: 7rem;
+        }
+
+        .cov{
+            padding-top: 3rem;
+            padding-bottom: 3rem;
         }
         
          .fixed-bg{
@@ -170,7 +177,7 @@ include('includes/config.php');
                 <p>A healthy diet helps ensure a successful blood donation, and also makes you feel better! Check out the following recommended foods to eat prior to your donation.</p>
             </div>
             <div class="col-lg-6">
-                <img class="img-fluid rounded" src="" alt="">
+                <img class="img-fluid rounded" src="https://www.news-medical.net/image.axd?picture=2020%2F10%2Fshutterstock_603317201-1.jpg" alt="">
             </div>
         </div>
         <!-- /.row -->
