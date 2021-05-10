@@ -7,13 +7,13 @@
             </ol>
             <div class="carousel-inner" role="listbox">
                 <!-- Slide One - Set the background image for this slide in the line below -->
-                <div class="carousel-item active" style=" height: 570px; background-image: url('https://www.healio.com/~/media/slack-news/stock-images/fm_im/c/covid-19-primary-care.jpeg')">
+                <div class="carousel-item active" style=" height: 425px; background-image: url('https://www.healio.com/~/media/slack-news/stock-images/fm_im/c/covid-19-primary-care.jpeg')">
                     <div class="carousel-caption d-none d-md-block">
                        
                     </div>
                 </div>
                 <!-- Slide Two - Set the background image for this slide in the line below -->
-                <div class="carousel-item" style=" height: 570px; background-image: url('https://www.choc.org/wp/wp-content/uploads/2020/04/1200x630-coronavirus-plasma-donation.jpg')">
+                <div class="carousel-item" style=" height: 425px; background-image: url('https://www.choc.org/wp/wp-content/uploads/2020/04/1200x630-coronavirus-plasma-donation.jpg')">
                     <div class="carousel-caption d-none d-md-block">
                     </div>
                 </div>
