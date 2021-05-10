@@ -198,10 +198,8 @@ include('includes/config.php');
     <!-- /.container -->
 
     <!-- Footer -->
-    <footer class="py-5 bg-inverse">
         <?php include('includes/footer.php'); ?>
-        <!-- /.container -->
-    </footer>
+       
 
     <!-- Bootstrap core JavaScript -->
     <script src="vendor/jquery/jquery.min.js"></script>
