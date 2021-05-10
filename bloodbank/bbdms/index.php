@@ -101,6 +101,16 @@ include('includes/config.php');
             padding-top: 7rem;
         }
         
+         .fixed-bg{
+            background-image: url('https://images.unsplash.com/photo-1514810771018-276192729582?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=750&q=80');
+            background-attachment: fixed;
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center center;
+            height: 100%; 
+            width: 100%;
+        }
+        
     </style>
 
 </head>
