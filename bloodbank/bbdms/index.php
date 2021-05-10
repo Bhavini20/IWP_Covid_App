@@ -16,7 +16,7 @@ include('includes/config.php');
     <title>Covid Relief Management System</title>
     <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
     <link href="vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
-    <link href="css/modern-business.css" rel="stylesheet">
+    <link href="./css/modern-business.css" rel="stylesheet">
 
     <style>
         .navbar-toggler {
@@ -54,7 +54,7 @@ include('includes/config.php');
             }
 
             100% {
-                width: 10ch;
+                width: 20ch;
             }
         }
 
@@ -75,10 +75,18 @@ include('includes/config.php');
         .tb{
             font-size: 3.4rem;
             font-weight: 300;
+            overflow: hidden;
+            white-space: nowrap;
+            animation: typing 5s steps(24), blink 1s ease-in-out 7s infinite;
+            width: 20ch;
+            margin: auto;
+            border-right: 4px solid rgb(43, 62, 70);
+            color: black;
         }
 
         .bingwidget {
             padding-left: 250px;
+    
         }
 
         .bldgrp{
@@ -87,6 +95,10 @@ include('includes/config.php');
        
         .don{
             margin-top: 7rem;
+        }
+
+        .gh{
+            padding-top: 7rem;
         }
         
     </style>
@@ -103,8 +115,8 @@ include('includes/config.php');
     <div class="container">
 
         <h1 class="my-4 mt-5 mb-5 text-center text-primary td">WELCOME</h1>
-        <h2 class="my-4 mt-5 mb-5 text-center text-primary tb">COVID RELEIF WEBSITE</h2>
-        <h1 class="my-4 mt-5 mb-5 text-center ">Covid Statistics</h1>
+        <h2 class="my-4 mt-5 mb-5 text-center text-primary tb ">COVID RELEIF WEBSITE</h2>
+        <h1 class="my-4 mt-5 mb-5 text-center gh">Covid Statistics</h1>
         <div class="bingwidget" data-type="covid19" data-market="en-us" data-language="en-us" data-app="bingwidget"></div>
 
         <script src="//www.bing.com/widget/bootstrap.answer.js" async=""></script>
@@ -153,8 +165,6 @@ include('includes/config.php');
                 <h2>BLOOD GROUPS</h2>
                 <p> Blood group of any human being will mainly fall in any one of the following groups.</p>
                 <ul>
-
-
                     <li>A positive or A negative</li>
                     <li>B positive or B negative</li>
                     <li>O positive or O negative</li>
