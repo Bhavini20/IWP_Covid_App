@@ -137,8 +137,8 @@ function MM_jumpMenu(targ,selObj,restore){ //v3.0
 															   <select name="menu1" onChange="MM_jumpMenu('parent',this,0)">
                   <option value="" selected="selected" class="form-control">***Select One***</option>
               
-                  <option value="manage-pages.php?type=aboutus">About Us</option> 
-                  <option value="manage-pages.php?type=donor">Why Become Donor</option>
+                  <option value="manage-pages.php?type=Symptoms">Symptoms</option> 
+                  <option value="manage-pages.php?type=DOs and DONT's">DOs and DON'Ts</option>
                 </select>
 												</div>
 											</div>
@@ -160,7 +160,7 @@ function MM_jumpMenu(targ,selObj,restore){ //v3.0
 									break;
 				
 				case "aboutus" :
-									echo "About US";
+									echo "Symptoms";
 									break;
 			
 				case "faqs" :
@@ -168,7 +168,7 @@ function MM_jumpMenu(targ,selObj,restore){ //v3.0
 									break;
 											
 				default :
-								echo "";
+								echo "DOs and DON'Ts";
 								break;
 			
 			}
